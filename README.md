@@ -3,6 +3,9 @@
 
 ## Week 1 | Testing I
 
+Austin Casey
+All deliverables are lumped at the bottom of this read me.
+
 ## Overview
 
 In this lab, you'll set up a complete testing environment from scratch using [Vitest](https://vitest.dev/), a modern JavaScript/TypeScript testing framework. By the end of this lab, you'll understand the anatomy of a test, configure a real testing environment, and write your first unit and integration tests.
@@ -1352,6 +1355,13 @@ Push your completed project to GitHub and submit the repository URL through Canv
 
 **Deliverables**
 2.3 Using the Arrange-Act-Assert can help you to keep track of what you're setting up for the test as well as what you expect the function to return.
-4.3.1 Creating these tests shows how important the different levels of testing are. There was a bug in the integration testing initially that caused a unit test to fail when it wasn't on its own.
-4.3.2 All the unit tests would fail for strings and any integration tests that rely on slugify or those unit tests would also fail.
+4.3.1 content.test.ts contains integration tests and strings.test.ts contains unit tests. You can tell which is an integration tests because it tests multiple units working together.
+4.3.2 All the unit tests would fail for strings and any integration tests that rely on slugify or those unit tests would also fail. This is because that bug obviously impacts the tests that check its functionality but the integration tests may rely on that function as well and break at some point. 
 4.3.3 Integration tests show you that multiple functions work together as expected where as unit tests just show that a singular function works properly.
+Testing Trophy Connection: This lab introduces us to using the three main types of testing during development, static , unit and integration. Our unit tests are important for ensuring each function works properly, but they also act as a backbone for our integration tests. These are where we gain the most confidence in our code and work to prove it will function as expected as a cohesive unit. 
+
+Additional tests:
+Slugify: added a test to ensure it works with uppercase strings
+Truncate: added a test to ensure it returns the original if it matches the length of the original
+Capitalize: added a test to ensure it only capitalizes the forst word in a phrase
+Count words: added a test to ensure it only uses spaces to break apart words for counting
